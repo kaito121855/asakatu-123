@@ -10,6 +10,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="header">
+      <a class="grid-6" href="/">Asakatu</a>
+      <div class="user_nav">
+        <a class="post" href="/tweets/show">マイページ</a>
+        <a class="post" href="/tweets/new">投稿</a>
+      </div>
+    </header>
+
+    <div class="main"><%= yield %></div>
+    
+    <footer>
+      <a class="footer_nav" href="/">ホーム</a>
+      <a class="footer_nav" href="#">タスク</a>
+      <a class="footer_nav" href="#">レポート</a>
+    </footer>
   </body>
 </html>
