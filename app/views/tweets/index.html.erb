@@ -1,0 +1,10 @@
+<div class="contents row">
+  <% @tweets.each do |tweet| %>
+    <div class="content_post">
+      <p><%= tweet.month %>月<%= tweet.day %>日</p>
+      <span class="name">
+        <%= tweet.wake_up_hour %>時<%= tweet.wake_up_minute %>
+      </span>
+    </div>
+  <% end %>
+</div>
