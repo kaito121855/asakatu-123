@@ -9,7 +9,7 @@ class TweetsController < ApplicationController
   
   def create
     @tweet = Tweet.new(tweet_params)
-    if @product.save
+    if @tweet.save
       redirect_to root_path
     else
       render :new
@@ -18,6 +18,6 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:user_id)
+    params.require(:tweet).permit(:manth, :day, :wake_up_hour, :wake_up_minute,)
   end
 end

@@ -1,0 +1,12 @@
+<div class="contents row">
+  <div class="container">
+    <h3>投稿する</h3>
+    <%= form_with(model: @tweet, local: true) do |form| %>
+      <%= form.text_field :manth, placeholder: "投稿月" %>
+      <%= form.text_field :day, placeholder: "投稿日" %>
+      <%= form.text_field :wake_up_hour, placeholder: "起床時間（時）" %>
+      <%= form.text_field :wake_up_minute, placeholder: "起床時間（分）" %>
+      <%= form.submit "送信" %>
+    <% end %>
+  </div>
+</div>
