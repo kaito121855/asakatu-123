@@ -13,6 +13,10 @@
 ActiveRecord::Schema.define(version: 2020_11_24_000543) do
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "manth", null: false
+    t.integer "day", null: false
+    t.integer "wake_up_hour", null: false
+    t.integer "wake_up_minute", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
